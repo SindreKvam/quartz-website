@@ -1,0 +1,1 @@
+My Neovim dotfiles can be found on [Github](https://github.com/SindreKvam/.dotfiles/tree/main/nvim/.config/nvim).
