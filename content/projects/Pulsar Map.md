@@ -51,7 +51,6 @@ Generated pulsar map from this data:
 
 ![[generated-pulsar-map.png]]
 
-
 ---
 ### Some formulas required
 
@@ -61,13 +60,17 @@ A hydrogen spin-flip produces radiation with a frequency of $f_H = 1 420.405 751
 If we have the period of a pulsar spin, we will get the period given in number of hydrogen spin-flips $\tau_H$ with the following equation:
 
 $$
-\tau_H = \frac{T_s}{7.04024\cdot10^{-10}}
+\tau_H = \frac{T_s}{7.04024\cdot10^{-10}}.
 $$
 We are also interested in finding all distances in relative to the distance to the centre of the milky way. The distance to Sgr A* is approximated to be $8 \text{ kpc}$ away. Meaning that we simply have to divide all distances given in *kpc* by 8 to get the relative distance $D_R$.
 
 $$
-D_R = \frac{D_{kpc}}{8}
+D_R = \frac{D_{kpc}}{8}.
 $$
-
+The pulsars does change its period over time. I am interested in calculating the estimated period at any given time. For this, two parameters from the ATNF database is needed. The period of the pulsar rotation $P_0$, the derivative $P_1$ and the epoch where $P_0$ is defined $P_E$. The epoch is given in MJD time, we will need to calculate our chosen date into the same time format.
+After having the selected time in MJD, the calculation of the period at that time is as follows:
+$$
+P_{predicted} = P_0 + P_1 \cdot (\text{MJD} - P_E) \cdot 86400.
+$$
 ---
 
